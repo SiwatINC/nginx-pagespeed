@@ -6,4 +6,4 @@ mkdir -p /config/log/php
 mkdir -p /config/nginx/site-confs
 mkdir -p /config/php
 mkdir -p /config/www
-
+mkdir -p /config/keys
