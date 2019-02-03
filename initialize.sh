@@ -14,6 +14,7 @@ if [ -z "$(ls -A /config)" ]; then
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/fastcgi_params" > /config/nginx/fastcgi_params
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/mime.types" > /config/nginx/mime.types
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/default" > /config/nginx/site-confs/default
+   curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/index.php" > /config/www/index.php
    echo "; Add any php.ini entry here to overwrite any php.ini configuration" > /config/php/php-overwrite.ini
    echo "Please replace yourdomain.com with your domain in /config/nginx/site-confs/default to enable pagespeed."
    exit 1
