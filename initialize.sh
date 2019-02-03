@@ -1,15 +1,15 @@
 echo "Starting Container Initialization Script."
 if [ -z "$(ls -A /config)" ]; then
    echo "Initializing . . ."
-   mkdir -p /config/cache/pagespeed_cache
-   mkdir -p /config/keys
-   mkdir -p /config/log/nginx
-   mkdir -p /config/log/pagespeed
-   mkdir -p /config/log/php
-   mkdir -p /config/nginx/site-confs
-   mkdir -p /config/php
-   mkdir -p /config/www
-   mkdir -p /config/keys
+   mkdir -p -v /config/cache/pagespeed_cache
+   mkdir -p -v /config/keys
+   mkdir -p -v /config/log/nginx
+   mkdir -p -v /config/log/pagespeed
+   mkdir -p -v /config/log/php
+   mkdir -p -v /config/nginx/site-confs
+   mkdir -p -v /config/php
+   mkdir -p -v /config/www
+   mkdir -p -v /config/keys
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/nginx.conf" > /config/nginx/nginx.conf
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/fastcgi_params" > /config/nginx/fastcgi_params
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/mime.types" > /config/nginx/mime.types
