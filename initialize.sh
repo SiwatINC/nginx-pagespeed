@@ -17,5 +17,6 @@ if [ -z "$(ls -A /config)" ]; then
    echo "; Add any php.ini entry here to overwrite any php.ini configuration" > /config/php/php-overwrite.ini
 else
    echo "Already Initiated, Starting NGINX PageSpeed and PHP7.2"
+   cat /config/php/php-overwrite.ini >> /etc/php/7.2/fpm/php.ini
    exit 0
 fi
