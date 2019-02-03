@@ -2,14 +2,14 @@ server {
     server_name _;
     listen 80;
     pagespeed FileCachePath /config/cache/pagespeed_temp/default;
-    pagespeed LoadFromFile "https://[your website url]/" "/config/www";
+    pagespeed LoadFromFile "https://yourdomain.com/" "/config/www";
     pagespeed MaxCacheableContentLength -1;
     pagespeed ImageResolutionLimitBytes 128000000;
     pagespeed EnableFilters inline_images,convert_jpeg_to_webp,convert_to_webp_lossless,convert_to_webp_animated,recompress_webp;
-    pagespeed MapOriginDomain http://localhost:80 https://[your website url];
+    pagespeed MapOriginDomain http://localhost:80 https://yourdomain.com;
     pagespeed SslCertDirectory /config/key;
     pagespeed SslCertFile ca.crt;
-    pagespeed Domain http*://*[your website url];
+    pagespeed Domain http*://*yourdomain.com;
     #listen 443 ssl;
     #ssl_certificate /config/keys/cert.crt;
     #ssl_certificate_key /config/keys/cert.key;
