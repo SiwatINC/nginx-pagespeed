@@ -16,6 +16,7 @@ if [ -z "$(ls -A /config)" ]; then
    curl "https://raw.githubusercontent.com/SiwatINC/nginx-pagespeed/master/default" > /config/nginx/site-confs/default
    echo "; Add any php.ini entry here to overwrite any php.ini configuration" > /config/php/php-overwrite.ini
    echo "Please edit your site configuration in the /config/nginx/site-confs/default directory to enable pagespeed"
+   exit 1
 else
    echo "Already Initiated, Starting NGINX PageSpeed and PHP7.2"
    cat /config/php/php-overwrite.ini >> /etc/php/7.2/fpm/php.ini
