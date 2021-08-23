@@ -1,4 +1,4 @@
-FROM siwatinc/ubuntubaseimage_unraid
+FROM ghcr.io/siwatinc/siwat-ubuntubaseimage:focal
 ENV DEBIAN_FRONTEND noninteractive
 ARG cachebust=1
 RUN apt-get update
