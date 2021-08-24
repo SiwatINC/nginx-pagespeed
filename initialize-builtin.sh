@@ -13,10 +13,10 @@ if [ -z "$(ls -A /config)" ]; then
    mkdir -p -v /config/keys
    mkdir -p /var/cache/nginx | :
    cp /initializer/nginx.conf /config/nginx/nginx.conf
-   cp /initializer/nginx.conf /config/nginx/fastcgi_params
-   cp /initializer/nginx.conf /config/nginx/mime.types
-   cp /initializer/nginx.conf /config/nginx/site-confs/default
-   cp /initializer/nginx.conf /config/www/index.php
+   cp /initializer/fastcgi_params /config/nginx/fastcgi_params
+   cp /initializer/mime.types /config/nginx/mime.types
+   cp /initializer/default /config/nginx/site-confs/default
+   cp /initializer/index.php /config/www/index.php
    echo "; Add any php.ini entry here to overwrite any php.ini configuration" > /config/php/php-overwrite.ini
    echo "Please replace yourdomain.com with your domain in /config/nginx/site-confs/default to enable pagespeed."
    exit 0
