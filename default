@@ -14,7 +14,7 @@ server {
     #ssl_certificate /config/keys/cert.crt;
     #ssl_certificate_key /config/keys/cert.key;
     root /config/www;
-    index index.php;
+    index index.php index.html;
     location ~ "\.pagespeed\.([a-z]\.)?[a-z]{2}\.[^.]{10}\.[^.]+" {
     	add_header "" "";
     }
