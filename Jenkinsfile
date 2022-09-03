@@ -1,9 +1,6 @@
 node {
-  git 'https://github.com/SiwatINC/nginx-pagespeed' // checks out Dockerfile and some project sources
-  def image = docker.build "siwatinc/nginx-pagespeed:latest"
-  image.push()
+  git branch: 'master', url: 'https://github.com/SiwatINC/nginx-pagespeed'
   docker.withRegistry("https://ghcr.io/v2") {
-      image.push()
+      docker.build("siwatinc/nginx-pagespeed:latest",'Dockerfile --no-cache').push()
   }
-  
 }
